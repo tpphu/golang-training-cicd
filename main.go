@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-import "./helper"
+import "github.com/tpphu/golang-training-cicd/helper"
 
 func main() {
 	// v := ""
