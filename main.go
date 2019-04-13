@@ -1,18 +1,13 @@
 package main
 
-import "fmt"
-import "github.com/tpphu/golang-training-cicd/helper"
+import "github.com/gin-gonic/gin"
 
 func main() {
-	// v := ""
-	v := false
-	// v := 0
-	// v := nil
-	fmt.Println("\n------------")
-	if helper.IsEmpty(v) {
-		fmt.Print("v is empty")
-	} else {
-		fmt.Print("v is empty")
-	}
-	fmt.Println("\n------------")
+	r := gin.Default()
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})
+	r.Run() // listen and serve on 0.0.0.0:8080
 }
