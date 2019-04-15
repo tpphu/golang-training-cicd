@@ -6,5 +6,6 @@ script:
  - go test -v ./...
 deploy:
   provider: heroku
+  app: tranquil-gorge-15185
   api_key:
     secure: "b63df6f4-cfdd-436e-8b42-213d1b59559b"
