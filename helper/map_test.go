@@ -7,7 +7,7 @@ import (
 
 func TestMapInt(t *testing.T) {
 	v := []int{1, 2, 3}
-	expected := []int{2, 4, 9}
+	expected := []int{2, 4, 6}
 	actual := Map(v, func(elem int) int {
 		return elem * 2
 	})
