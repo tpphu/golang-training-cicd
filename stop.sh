@@ -1,1 +1,1 @@
-lsof -t -i tcp:8080 -s tcp:listen | xargs kill
+/usr/sbin/lsof -t -i tcp:8080 -s tcp:listen | xargs kill

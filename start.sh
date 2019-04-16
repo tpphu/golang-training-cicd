@@ -1,1 +1,1 @@
-nohup ./bin/golang-training-cicd >> ./bin/log.log &
+nohup ./bin/golang-training-cicd >> ./bin/log.log 2>&1 &
