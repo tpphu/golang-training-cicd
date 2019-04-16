@@ -6,8 +6,8 @@ script:
 before_install:
 - sudo apt-get update
 - sudo apt-get install -y sshpass
-after_script:
-- sshpass -p $DEPLOY_PASS ssh $DEPLOY_USER@$DEPLOY_HOST $DEPLOY_PATH/build.sh
+after_success:
+- ./deploy.sh
 env:
   global:
   - secure: R4la8awUetr2lhpTAs3DwrO28oZwWJZUX68VlvcDGWxkYAeYM1yrd7+v68SuvGGRrG46TR8CCwXajHFvnnXGC25c9boM+4NHT281DpnbXgo3b8uxCCUZc8MFupbP5Cj2XjfRDDrdfaarHIXyJ9zX/VvlOtIBWx/8W1cpPfheSw/Xd29SRJVnflwvO4tO/n2B5Q8utBSvL5md5D5jKQpDxES1LqnxRDlCvvkhdGKIxPBAA3152RSSdj3qX1c7CvNhbStFNv9l3KZ5WeqgT3Xa4/NQHgAtCrAk/UcmvF2qB6XXiYKTTaJl94aIO65sV8CyDbkrqZxGL2nLMdlcyiUe7+kjQ9HjWzk8toUiyr7yLmEDv+xBf5JDZAgVh49jQ8bXo9Bigq2afmoWrIczo9bW5Ur6PMNYhCdZhHfylKRYwC1RR58NtoaJyehfwUjvvUp6NByqeLLSROlZXM9rkceDwjsppjML5h//jxEL6Z+xfbNcsi1p9+dJjN6S6aHnEvpti0Cl3w3IGCLn1Tj5I89M0Mmx8GEzYTZDThIAf84udLNaUllPYOJHwaSQCz17fZND1BVWSyMP+0uEpjNMzLAnoYCa+bckkJ/5LDp6LlIQD4BOUDQYg3nrOeZb+2lmtZbTuHj176DpIOYB9JL4pNJQg/RvPWqjzRGRRnu8+KPfCgM=
