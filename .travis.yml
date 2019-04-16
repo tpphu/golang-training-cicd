@@ -18,4 +18,4 @@ after_success:
   - export SSHPASS=$DEPLOY_PASS
   - go build -o bin/golang-training-cicd -v .
   - sshpass -e scp bin/golang-training-cicd $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/bin
-  - sshpass ssh $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH ./run.sh
+  - sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH ./run.sh
