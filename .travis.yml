@@ -3,10 +3,9 @@ go:
 - 1.12.3
 script:
 - go test -v ./...
-addons:
-  apt:
-    packages:
-    - sshpass
+before_install:
+- sudo apt-get update
+- sudo apt-get install -y sshpass
 after_success:
 - sshpass -p $DEPLOY_PASS ssh $DEPLOY_USER@$DEPLOY_HOST $DEPLOY_PATH/build.sh
 env:
