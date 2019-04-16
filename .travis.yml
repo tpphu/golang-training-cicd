@@ -8,7 +8,6 @@ addons:
 script:
 - go test -v ./...
 after_success:
-- mkdir bin
 - export SSHPASS=$DEPLOY_PASS
 - sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST $DEPLOY_PATH/build.sh
 env:
