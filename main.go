@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-const version = 10
+const version = 11
 
 func main() {
 	r := gin.Default()
